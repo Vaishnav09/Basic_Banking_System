@@ -80,7 +80,7 @@
         if($flag==true){
         $sql = "INSERT INTO `transfers` (`transfer_id`, `sender`, `receiver`, `amount`) VALUES ('', '$sender','$receiver','$amount')";
         echo "<script>alert('Transaction Successfull');</script>";
-        header("location:viewcustomers.php");
+        echo '<script>window.location="viewcustomers.php"</script>';
         if ($con->query($sql) === TRUE) {
         } else 
         {
